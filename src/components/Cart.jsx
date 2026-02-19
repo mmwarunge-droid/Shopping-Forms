@@ -1,5 +1,3 @@
-import React from 'react';
-
 function Cart ({ cartItems, removeFromCart, darkMode }) {
 const totalCost = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
 // TODO: Implement cart item display and total price calculation

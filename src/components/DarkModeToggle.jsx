@@ -6,9 +6,10 @@ function DarkModeToggle ({darkMode, toggleDarkMode}) {
   return (
     <button onClick={()=> toggleDarkMode(!darkMode)}
     style={{marginBottom: '20px', padding: '8px 14px', borderRadius: '4px', border: 'none', cursor: 'pointer'}}
-    
+    data-testid="toggle-button"
     >
-      {darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+    Toggle Dark Mode
+    {darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
     </button>
   );
 }
