@@ -1,3 +1,36 @@
 /* TODO (optional): Define styles for dark mode */
 
 /* TODO (optional): Ensure text and background colors adjust for dark mode */
+
+ .dark {
+  background-color: #121212;
+  color: #f5f5f5;
+  transition: all 0.3s ease;
+ }
+ .dark h1,
+ .dark h2,
+ .dark h3,
+ .dark p,
+ .dark label {
+  color: #f5f5f5;
+ }
+ .dark select {
+  background-color: #1f1f1f;
+  color: white;
+  border: 1px solid #333;
+  }
+ .dark button {
+  background-color: #333;
+  color: white;
+  border: 1px solid #444;
+ }
+ .dark button:hover {
+  background-color: #444;
+ }
+ .dark .card {
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+ }
+ .dark .cartContainer {
+  background-color: #1e1e1e;
+ }

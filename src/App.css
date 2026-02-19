@@ -1,42 +1,96 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
+ body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+ .app {
+  min-height: 100vh;
+  padding: 40px;
+  transition: all 0.3s ease;
+  background-color: #f4f6f8;
+  color: #222;
+ }
+ .app.dark {
+  background-color: #121212;
+  color: #f5f5f5;
+ }
+ .app.dark select,
+ .app.dark button {
+  background-color: #1f1f1f;
+  color: #fff;
+  border: 1px solid #333;
+ }
+ h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+ }
+ p {
+  margin-bottom: 20px;
+  opacity: 0.8;
+ }
+ label {
+  font-weight: 600;
+  margin-right: 10px;
+ }
+ select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  transition: 0.2s ease;
+ }
+select:focus {
+  outline: none;
+  border-color: #4f46e5;
+ }
+ button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: #4f46e5;
+  color: white;
+  transition: 0.2s ease;
+  margin-left: 8px;
+ }
+ button:hover {
+  background: #4338ca;
+  transform: translateY(-2px);
+ }
+ .product-item {
+  padding: 15px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: 0.2s ease;
+ }
+ .app.dark .product-item {
+  background: #1e1e1e;
+ }
+ .product-item:hover {
+  transform: translateY(-3px);
+ }
+ .cart-container {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+ }
+ .app.dark .cart-container {
+  background: #1e1e1e;
+ }
+ .cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+ }
+ .cart-total {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+ }
