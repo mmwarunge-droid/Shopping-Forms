@@ -1,107 +1,81 @@
-# Lab: Building a Dynamic Shopping App with React Hooks
+# Dynamic Shopping App
 
-## Introduction
+A simple React-based shopping application that allows users to browse products, add them to a shopping cart, filter by category, and toggle dark mode. This project demonstrates state management using React hooks (`useState`) and basic component composition.
 
-Your company is developing a **new grocery shopping app** to improve the shopping experience for customers. You have been assigned to implement **three key features**:
+## Features
 
-1. **Dark Mode Toggle** – Users can switch between light and dark mode.
-2. **Add to Cart** – Users can add items to the shopping cart.
-3. **Category Filtering** – Users can filter products by category.
+- **Browse Products:** Displays a list of products with name, price, and availability.
+- **Add to Cart:** Users can add multiple items to their cart.
+- **Remove from Cart:** Remove items from the shopping cart.
+- **Cart Total:** Dynamically updates the total number of items in the cart.
+- **Category Filtering:** Filter products by category (e.g., Fruits, Dairy).
+- **Dark Mode Toggle:** Switch between light and dark themes.
 
-Your task is to implement these features using **React Hooks (`useState`)** while ensuring the app is functional and visually consistent.
+## Tech Stack
 
----
+- **Frontend:** React.js
+- **Styling:** CSS modules and regular CSS
+- **Bundler:** Vite
 
-## **Challenge**
-1. Implement a **dark mode toggle**.
-2. Allow users to **add items** from a shopping cart.
-3. Implement **category-based filtering** for the shopping list.
+## Installation
 
-## **Bonus Challenge**
-4. Display a **cart total** showing the number of items added.
+1. Clone the repository:
 
----
+```bash
+git clone https://github.com/your-username/dynamic-shopping-app.git
+cd dynamic-shopping-app
+Install dependencies:
 
-## **Instructions**
+npm install
+Start the development server:
 
-### **1️⃣ Fork and Clone the Repository**
-1. **Fork** the provided GitHub repository.
-2. **Clone** the forked repository to your local machine:
-   ```sh
-   git clone <your-forked-repository-url>
-   cd react-hooks-state-lab
-   ```
-3. Open the project in **VSCode**.
-4. Install dependencies:
-   ```sh
-   npm install
-   ```
-5. Start the development server:
-   ```sh
-   npm run dev
-   ```
+npm run dev
+Open your browser and go to http://localhost:5173/.
 
-### **2️⃣ Implement the Dark Mode Toggle**
-- Implement a **button** that toggles between light and dark mode.
-- The text of the toggle button should change dynamically.
-   - Feel free to also play with styling! However, you'll only be tested on the text of the dark mode toggle button.
-- Use the **useState hook** to manage the current theme.
+Project Structure
+Dynamic-Shopping-App/
+├── src/
+│   ├── components/
+│   │   ├── Cart.jsx
+│   │   ├── DarkModeToggle.jsx
+│   │   ├── ProductCard.jsx
+│   │   └── ProductList.jsx
+│   ├── data/
+│   │   └── products.js
+│   ├── styles/
+│   │   └── DarkMode.module.css
+│   ├── App.jsx
+│   └── index.css
+├── package.json
+├── vite.config.js
+└── README.md
+Usage
+Browse available products displayed on the main page.
 
-### **3️⃣ Implement the Add to Cart Feature**
-- Each product should have an **"Add to Cart"** button.
-- Clicking the button should add the item to the cart.
-- The cart should display a **list of added items** with the text 'Item is in your cart' such as 'Milk is in your cart.'
+Use the Add to Cart button to add items to your shopping cart.
 
-### **4️⃣ Implement the Category Filter**
-- Create a **dropdown menu** to filter products by category.
-- When a user selects a category, **only matching products** should be displayed.
-- Use **state management (`useState`)** to track the selected category.
+Remove items from your cart using the Remove button in the cart section.
 
----
+Filter products by category using the dropdown menu.
 
-## **Bonus Challenge: Cart Total**
-- Display a **cart total** showing how many items have been added.
-- The total should update dynamically when items are added.
+Toggle dark mode using the Switch to Dark Mode / Light Mode button.
 
----
+Testing
+This project uses Jest and React Testing Library for testing. Run the tests with:
 
-## **Testing and Debugging**
-1. Run the test suite:
-   ```sh
-   npm test
-   ```
-2. Debug any failing tests:
-   - Use **browser developer tools** (`F12 → Console`).
-   - Verify that product cards display correctly.
-   - Ensure filtering and cart updates work as expected.
+npm test
+Notes
+Ensure products.js export matches the import in App.jsx:
 
----
+// src/data/products.js
+const sampleProducts = [
+  { id: 1, name: 'Apple', category: 'Fruits', price: 1.0, inStock: true },
+  { id: 2, name: 'Milk', category: 'Dairy', price: 2.5, inStock: true },
+];
 
-## **Version Control**
-1. Initialize a Git repository:
-   ```sh
-   git init
-   ```
-2. Regularly commit your changes:
-   ```sh
-   git add .
-   git commit -m "Initial shopping app setup"
-   ```
-3. Push to GitHub:
-   ```sh
-   git push origin main
-   ```
+export default sampleProducts;
+For dark mode styling, DarkMode.module.css is used.
 
----
+License
+This project is open-source and free to use.
 
-### **✅ Submission**
-- Submit your project as a **GitHub repository** to CodeGrade.
-
----
-
-## **Resources**
-- [React Docs: useState](https://react.dev/reference/react/useState)
-- [Material UI Documentation](https://mui.com)
-- [CSS Modules Documentation](https://github.com/css-modules/css-modules)
-- [Jest Testing Framework](https://jestjs.io/)
-- [React Testing Library](https://testing-library.com)
