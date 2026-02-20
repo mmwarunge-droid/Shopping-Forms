@@ -1,8 +1,8 @@
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import App from '../App'
-import { sampleProducts } from '../components/ProductList'
 import '@testing-library/jest-dom'
+import sampleProducts from '../data/products'
 
 test('toggles dark mode on button click', () => {
   render(<App />)
@@ -18,7 +18,7 @@ test('toggles dark mode on button click', () => {
 
 test('filters products by category', () => {
   render(<App />)
-  const dropdown = screen.getByRole('combobox')
+  const dropdown = screen.getByTestId('category-filter')
 
   fireEvent.change(dropdown, { target: { value: 'Fruits' } })
   expect(screen.getByText(/Apple/i)).toBeInTheDocument()
@@ -27,7 +27,7 @@ test('filters products by category', () => {
 
 test('displays message when no products match filter', () => {
   render(<App />)
-  const dropdown = screen.getByRole('combobox')
+  const dropdown = screen.getByTestId('category-filter')
   fireEvent.change(dropdown, { target: { value: 'NonExistent' } })
 
   expect(screen.getByText(/no products available/i)).toBeInTheDocument()

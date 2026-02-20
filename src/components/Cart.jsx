@@ -15,6 +15,9 @@ function Cart ({ cartItems, removeFromCart, darkMode }) {
 <>
 {cartItems.map(item => (
 <div key={item.id} className="cart-item">
+  <p>
+    {item.name} is in your cart
+  </p>
 <span>
 {item.name} x {item.quantity} - ${(item.price * item.quantity).toFixed(2)}
 </span>
