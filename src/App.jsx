@@ -88,10 +88,7 @@ const filteredProducts = products
   <option value="Dairy">Dairy</option>
    </select>
 
- {filteredProducts.length === 0 && (
-  <p>No products available</p>
-  )}
-  
+
    <ProductList
    products={filteredProducts} // Products listed
    addToCart={addToCart}
